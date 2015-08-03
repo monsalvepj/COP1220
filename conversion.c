@@ -17,8 +17,8 @@ int main(){
 	
 	int selection, tf, tc;
 	
-	printf("Celsius to Fahrenheit conversion chart program\n");
-	printf("Select (1) for Fahrenheit conversion chart or (2) for Celsius chart, press (3) to exit program: ");
+	printf("Celsius to Fahrenheit conversion chart program\n\n");
+	printf("Select:\n(1) for Fahrenheit conversion chart\n(2) for Celsius chart\n(3) to exit program: ");
 	scanf("%d", &selection);
 	
 	switch(selection){
@@ -31,7 +31,7 @@ int main(){
 		case 3:
 		break;
 		default:
-		printf("Try again\n");
+		printf("Entry not valid. Try again\n");
 	}
 	
 	printf("Hope you enjoyed the program\n");
@@ -44,8 +44,17 @@ int main(){
 
 
 
-void fahrenheitFunc (int ftf){
-	printf("F to C");
+void fahrenheitFunc (){
+	
+	float tf;
+	int tc;
+	
+	printf("Enter temperature in C (Celsius): ");
+	scanf("%d",&tc);
+	
+	tf = (tc * 1.8 + 32);
+	
+	printf("%d degrees Celsius = %.2f Fahrenheit\n",tc, tf);
 	
 }
 
@@ -54,6 +63,14 @@ void fahrenheitFunc (int ftf){
 
 
 
-void celciusFunc (int ftc){
-	printf("C to F");
+void celciusFunc (){
+	float tf;
+	int tc;
+	
+	printf("Enter temperature in F (Fahrenheit): ");
+	scanf("%f",&tf);
+	
+	tc = ((((tf - 32) * 5) / 9));
+	
+	printf("%.2f Fahrenheit degrees Celsius = %d Celsius\n",tf, tc);
 }
