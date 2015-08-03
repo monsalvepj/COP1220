@@ -7,25 +7,37 @@ void celciusFunc ();
 int main(){
 	
 	int selection, tf, tc;
+	int repeat = 1;
 	
-	printf("Celsius to Fahrenheit conversion chart program\n\n");
-	printf("Select:\n(1) for Fahrenheit conversion chart\n(2) for Celsius chart\n(3) to exit program: ");
-	scanf("%d", &selection);
-	
-	switch(selection){
-		case 1:
-		fahrenheitFunc();
-		break;
-		case 2:
-		celciusFunc();
-		break;
-		case 3:
-		break;
-		default:
-		printf("Entry not valid. Try again\n");
+	while (repeat == 1){
+		printf("Celsius to Fahrenheit conversion chart program\n\n");
+		printf("Select:\n(1) for Fahrenheit conversion chart\n(2) for Celsius chart\n(3) to exit program: ");
+		scanf("%d", &selection);
+		
+		switch(selection){
+			case 1:
+			fahrenheitFunc();
+			break;
+			case 2:
+			celciusFunc();
+			break;
+			case 3:
+			break;
+			default:
+			printf("Entry not valid. Try again\n");
+		}
+			
+			
+			printf("Would you like to run the program again? (1 - Yes/ 2 - No) ");
+			scanf("%d", &repeat);
+			
+		// printf("Celsius to Fahrenheit conversion chart program\n\n");
+		// printf("Select:\n(1) for Fahrenheit conversion chart\n(2) for Celsius chart\n(3) to exit program: ");
+		// scanf("%d", &selection);
+			
 	}
 	
-	printf("Hope you enjoyed the program\n");
+	printf("\nHope you enjoyed the program\n");
 
 	return 0;
 }
