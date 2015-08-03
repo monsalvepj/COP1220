@@ -1,12 +1,3 @@
-/*2.) CONVERSION: TEMPERATURE
- Implement the following integer functions:
-a)	Function celsius returns the Celsius equivalent of a Fahrenheit temperature.
-b)	Function fahrenheit returns the Fahrenheit equivalent of a Celsius temperature.
-c)	Use these functions to write a program that prints charts showing the Fahrenheit equivalents of all Celsius temperatures from 0 to 100 degrees,
-and the Celsius equivalents of all Fahrenheit temperatures from 32 to 212 degrees. Print the outputs in a neat tabular format that minimizes
-the number of lines of output while remaining readable.*/
-
-
 //Pedro Monsalve - P07496482 - Temperature Conversion
 #include <stdio.h>
 void fahrenheitFunc ();
@@ -49,18 +40,22 @@ void fahrenheitFunc (){
 	float tf;
 	int tc, i;
 	
-	printf("Enter temperature in C (Celsius): ");
+	printf("\nEnter temperature in C (Celsius): ");
 	scanf("%d",&tc);
 	
 	tf = (tc * 1.8 + 32);
 	
-	printf("%d degrees Celsius = %.2f Fahrenheit\n",tc, tf);
+	printf("%d degrees Celsius = %.1f Fahrenheit\n",tc, tf);
 	
-	printf("Here's a little handy chart:\n");
+	printf("\nHere's a handy little chart:\n");
 	
-	printf("Celisius\tFahrenheit\t\n");
-	for (i = 0, i < 10, i++){
-		printf("%d\t%.2f\n", i, (1 * 1.8 + 32));
+	printf("CELSIUS\t\tFAHRENHEIT\n");
+	for (i = 0; i < 10; i++){
+		printf("%5d\t%15.1f\n", i, (i * 1.8 + 32));
+	}
+	
+	for (i = 10; i <= 100; i+=10){
+		printf("%5d\t%15.1f\n", i, (i * 1.8 + 32));
 	}
 	
 }
@@ -72,12 +67,23 @@ void fahrenheitFunc (){
 
 void celciusFunc (){
 	float tf;
-	int tc;
+	int tc, i;
 	
-	printf("Enter temperature in F (Fahrenheit): ");
+	printf("\nEnter temperature in F (Fahrenheit): ");
 	scanf("%f",&tf);
 	
 	tc = ((((tf - 32) * 5) / 9));
 	
-	printf("%.2f Fahrenheit degrees Celsius = %d Celsius\n",tf, tc);
+	printf("%.1f Fahrenheit degrees Celsius = %d Celsius\n",tf, tc);
+	
+	printf("\nHere's a handy little chart:\n");
+
+	printf("FAHRENHEIT\tCELSIUS\n");
+	for (i = 0; i < 10; i++){
+		printf("%8.1f%12d\n", (i * 1.8 + 32), i);
+	}
+	
+	for (i = 10; i <= 100; i+=10){
+		printf("%8.1f%12d\n", (i * 1.8 + 32), i);
+	}
 }
