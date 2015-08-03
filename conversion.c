@@ -16,6 +16,12 @@ int celciusFunc (int x);
 
 int main(){
 	
+	int selection;
+	
+	printf("Celsius to Fahrenheit conversion chart program\n");
+	printf("Select 1 for Fahrenheit conversion chart or 2 for Celsius chart: ");
+	scanf("%d", &selection);
+	
 	
 	
 	return 0;
