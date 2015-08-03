@@ -47,7 +47,7 @@ int main(){
 void fahrenheitFunc (){
 	
 	float tf;
-	int tc;
+	int tc, i;
 	
 	printf("Enter temperature in C (Celsius): ");
 	scanf("%d",&tc);
@@ -55,6 +55,13 @@ void fahrenheitFunc (){
 	tf = (tc * 1.8 + 32);
 	
 	printf("%d degrees Celsius = %.2f Fahrenheit\n",tc, tf);
+	
+	printf("Here's a little handy chart:\n");
+	
+	printf("Celisius\tFahrenheit\t\n");
+	for (i = 0, i < 10, i++){
+		printf("%d\t%.2f\n", i, (1 * 1.8 + 32));
+	}
 	
 }
 
