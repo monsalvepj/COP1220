@@ -10,13 +10,13 @@ the number of lines of output while remaining readable.*/
 //Pedro Monsalve - P07496482 - Temperature Conversion
 #include <stdio.h>
 
-int fahrenheitFunc (int x);
+int fahrenheitFunc (int ftf);
 
-int celciusFunc (int x);
+int celciusFunc (int ftc);
 
 int main(){
 	
-	int selection;
+	int selection, tf, tc;
 	
 	printf("Celsius to Fahrenheit conversion chart program\n");
 	printf("Select 1 for Fahrenheit conversion chart or 2 for Celsius chart: ");
@@ -32,7 +32,7 @@ int main(){
 
 
 
-int fahrenheitFunc (int x){
+int fahrenheitFunc (int ftf){
 	
 }
 
@@ -41,6 +41,6 @@ int fahrenheitFunc (int x){
 
 
 
-int celciusFunc (int x){
+int celciusFunc (int ftc){
 	
 }
