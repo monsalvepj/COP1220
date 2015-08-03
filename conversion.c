@@ -31,10 +31,6 @@ int main(){
 			printf("Would you like to run the program again? (1 - Yes/ 2 - No) ");
 			scanf("%d", &repeat);
 			
-		// printf("Celsius to Fahrenheit conversion chart program\n\n");
-		// printf("Select:\n(1) for Fahrenheit conversion chart\n(2) for Celsius chart\n(3) to exit program: ");
-		// scanf("%d", &selection);
-			
 	}
 	
 	printf("\nHope you enjoyed the program\n");
